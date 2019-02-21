@@ -9,30 +9,40 @@ Tech stack:
  * Spring Cloud Streams
  * Apache Kafka
 
-A continuación se muestra un diagrama de los servicios de los que vamos a hacer uso.
+Following you can see a diagram with all the services we'll to use.
 
 ![Microservices](./docs/kafka-services.png)
 
-## Ejecutar la aplicación
+## Fast run
 
-Para lanzar todos los servicios ejecute el siguiente comando.
+To execute all the services with all the configuration by default, just execute the following command.
 
 ```
  $ make run
 ```
 
-Una vez que todos los servicios estén levantados:
+Once all the services are up and running, you can access to the following URL's:
 
-* Lanzar un nuevo "Order" [http://localhost:8090](http://localhost:8090)
-* Podemos inspeccionar el servicios de "Order" [http://localhost:8091](http://localhost:8091)
-* Podemos inspeccionar el servicios de "Payment" [http://localhost:8092](http://localhost:8092)
-* Podemos monitorizar los eventos del sistemas en  [http://localhost:8095](http://localhost:8095)
+ * If you want to simulate a new order `Order` [http://localhost:8090](http://localhost:8090)
+ * Camunda webapp for the service `Order` [http://localhost:8091](http://localhost:8091)
+ * Camunda webapp for the service `Payment` [http://localhost:8092](http://localhost:8092)
+ * You can monitor all the system events in  [http://localhost:8095](http://localhost:8095)
 
-Las credenciales de acceso a los servicios de Order y Payment son:
+To access to the Camunda webapp in the `Order` and `Payment` services, you can user the following credentials:
 
  * user: `demo`
  * password: `demo`
 
+## More help
+
+If you need more help, you just have to execute the following command:
+
+```
+ $ make
+```
+
 ## Referencias
 
  * https://blog.bernd-ruecker.com/flowing-retail-demonstrating-aspects-of-microservices-events-and-their-flow-with-concrete-source-7f3abdd40e53
+ * https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/
+ * https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part-2/
